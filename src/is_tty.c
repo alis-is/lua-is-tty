@@ -33,7 +33,19 @@ int l_stdout_is_tty(lua_State *L)
 }
 
 static const struct luaL_Reg lua_is_tty[] = {
+    /*
+    ---#DES 'is_tty.is_stdin_tty'
+    ---
+    ---Returns true if stdin is tty
+    ---@return boolean
+    */
     {"is_stdin_tty", l_stdin_is_tty},
+    /*
+    ---#DES 'is_tty.is_stdout_tty'
+    ---
+    ---Returns true if stdout is tty
+    ---@return boolean
+    */
     {"is_stdout_tty", l_stdout_is_tty},
     {NULL, NULL}};
 
