@@ -1,4 +1,4 @@
-#if defined(LUA_USE_POSIX) /* { */
+#if defined(LUA_USE_POSIX) || defined(LUA_USE_LINUX) || defined(LUA_USE_MACOSX)/* { */
 
 #include <unistd.h>
 #define stdin_is_tty() isatty(0)
